@@ -1,0 +1,37 @@
+<%= render 'layouts/header' %>
+<div class="container-fluid">
+	<% if @subcategory.apparel %>
+		<% Subcategory.all.each do |sub| %>
+			<%= link_to sub.name, sub, class: "btn btn-primary" if sub.apparel %>
+		<% end %>
+    <% elsif @subcategory.accessory %>
+		<% Subcategory.all.each do |sub| %>
+			<%= link_to sub.name, sub, class: "btn btn-primary" if sub.accessory %>
+		<% end %>
+     <% elsif @subcategory.mobile %>
+	 	<% Subcategory.all.each do |sub| %>
+			<%= link_to sub.name, sub, class: "btn btn-primary" if sub.mobile %>
+		<% end %>
+	 <% elsif @subcategory.laptop %>
+	 	<% Subcategory.all.each do |sub| %>
+			<%= link_to sub.name, sub, class: "btn btn-primary" if sub.laptop %>
+		<% end %>
+	 <% elsif @subcategory.home %>
+		<% Subcategory.all.each do |sub| %>
+			<%= link_to sub.name, sub, class: "btn btn-primary" if sub.home %>
+		<% end %>
+	<% else %> 
+		<%if @subcategory.other %>
+			<% Subcategory.all.each do |sub| %>
+				<%= link_to sub.name, sub, class: "btn btn-primary" if sub.other %>
+			<% end %>
+		<% end %>
+	<% end %>
+    	<div class="col-md-12 text-center" id="consumer-type">
+			<%= link_to @subcategory.gender1, men_path, class: "btn btn-default" if @subcategory.gender1 %>
+			<%= link_to @subcategory.gender2, women_path, class: "btn btn-default" if @subcategory.gender2%>
+			<%= link_to @subcategory.gender3, both_path, class: "btn btn-default" if @subcategory.gender3%>
+		</div>
+
+</div>
+<%= render 'listings/listing', obj: @subcategory_women %>

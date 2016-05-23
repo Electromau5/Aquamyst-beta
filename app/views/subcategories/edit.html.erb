@@ -1,0 +1,16 @@
+<div class = "container-fluid">
+	<h1 style="text-align:center">Update Subcategory Details</h1>
+		<div class = "row">
+				<div class = "col-md-6 col-md-offset-3">
+					<%= form_for @subcategory do |l| %>
+						<%= l.label :name %><br />
+						<%= l.text_field :name, class: "form-control" %><br />
+						<%= l.label :description %><br />
+						<%= l.text_area :description, class: "form-control" %><br />
+						<%= l.label :image %>
+						<%= l.file_field :image, class: "form-control"%><br />
+						<%= l.submit 'Update', class: 'btn btn-primary btn-lg'  %>
+					<% end %>
+				</div>
+			</div>
+</div>

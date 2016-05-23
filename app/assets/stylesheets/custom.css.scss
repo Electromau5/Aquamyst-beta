@@ -1,0 +1,57 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.company-details > .col-md-3 > h4
+{
+	color: #fff;
+	font-family: "Raleway-Bold", sans-serif;
+	font-size: 17px;
+}
+.company-details > .col-md-3 > p
+{
+	color: #fff;
+	font-family: "Raleway-ExtraLight", sans-serif;
+	font-size: 13px;
+}
+.company-details > .col-md-3 > p > a
+{
+	color: #fff;
+	font-family: "Raleway-ExtraLight", sans-serif;
+	font-size: 13px;
+}
+.glyphicon-search
+{
+	margin-top: -1px;
+}
+.icon-bar {
+    background-color: black;
+  }
+  .navbar-brand
+  {
+  	margin-top: -3px;
+  }
+.navbar-default .navbar-nav li > a 
+{
+	color: #fff;
+	font-family: "Raleway-ExtraLight", sans-serif;
+	font-weight: thin;
+	font-size: 15px;
+}
+
+.navbar-default .navbar-nav li > a:hover
+{
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.navbar-toggle
+{
+	border-color: black;
+}
+#search-form
+{
+	float:left;
+	margin-top: 8px;
+	margin-left: 0px;
+}

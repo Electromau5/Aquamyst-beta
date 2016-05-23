@@ -1,0 +1,43 @@
+.caption
+{
+	background-color: #000;
+	color: #fff;
+	padding: 6px !important;
+}
+.checkbox-inline + .checkbox-inline {
+    margin-top: 1px;
+    margin-left: 0px;
+    display: inherit;
+}
+
+#grid
+{
+	width: 100%;
+	margin: 0 auto;
+}
+
+#listing-box
+{	
+	 border-radius: 0px;
+	 width: 300px;
+	 padding-top: 33.7px!important;
+}
+
+.listing_name
+{
+	font-family: 'Raleway-Medium', sans-serif;
+	font-size: 17px;
+	text-align: center;
+	padding: 15px;
+	border-radius: 5px;
+}
+
+.listing-title
+{
+	font-family:'Raleway-Light', sans-serif;
+	font-size:5px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 5%;
+}
+
