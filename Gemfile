@@ -17,6 +17,7 @@ gem 'paperclip', '~> 4.3', '>= 4.3.3'
 gem 'masonry-rails', '~> 0.2.4'
 gem 'jquery-turbolinks'
 gem 'elevatezoom-rails'	
+gem 'devise', '~> 4.1', '>= 4.1.1'
 
 group :development, :test do
   gem 'byebug'
