@@ -10,35 +10,46 @@
       <div class = "col-xs-6 col-md-12">
    
 <div class="collapse navbar-collapse" id="myNavbar">
-	<div class="sub-headers">
+	
 	<% if @subcategory.apparel %>
 		<% Subcategory.all.each do |sub| %>
-			<%= link_to sub.name, sub, class: "btn btn-primary" if sub.apparel %>
+		<div class="sub-headers">
+			<li><%= link_to sub.name, sub, class: "btn btn-primary" if sub.apparel %></li><br />
+		</div>
 		<% end %>
     <% elsif @subcategory.accessory %>
 		<% Subcategory.all.each do |sub| %>
-			<%= link_to sub.name, sub, class: "btn btn-primary" if sub.accessory %>
+		<div class="sub-headers">
+			<li><%= link_to sub.name, sub, class: "btn btn-primary" if sub.accessory %></li><br />
+		</div>
 		<% end %>
      <% elsif @subcategory.mobile %>
 	 	<% Subcategory.all.each do |sub| %>
-			<%= link_to sub.name, sub, class: "btn btn-primary" if sub.mobile %>
+	 	<div class="sub-headers">
+			<li><%= link_to sub.name, sub, class: "btn btn-primary" if sub.mobile %></li><br />
+		</div>
 		<% end %>
 	 <% elsif @subcategory.laptop %>
 	 	<% Subcategory.all.each do |sub| %>
-			<%= link_to sub.name, sub, class: "btn btn-primary" if sub.laptop %>
+		<div class="sub-headers">
+			<li><%= link_to sub.name, sub, class: "btn btn-primary" if sub.laptop %></li><br />
+		</div>
 		<% end %>
 	 <% elsif @subcategory.home %>
 		<% Subcategory.all.each do |sub| %>
-			<%= link_to sub.name, sub, class: "btn btn-primary" if sub.home %>
+			<div class="sub-headers">
+			<li><%= link_to sub.name, sub, class: "btn btn-primary" if sub.home %></li><br />
+		</div>
 		<% end %>
 	<% else %> 
 		<%if @subcategory.other %>
 			<% Subcategory.all.each do |sub| %>
-				<%= link_to sub.name, sub, class: "btn btn-primary" if sub.other %>
+				<div class="sub-headers">
+			<li><%= link_to sub.name, sub, class: "btn btn-primary" if sub.other %></li><br />
+		</div>
 			<% end %>
 		<% end %>
 	<% end %>
-</div>
 </div>
 </div>
 </div>
@@ -56,3 +67,5 @@
 
 </div>
 <%= render 'listings/listing', obj: @subcategory_women %>
+
+
