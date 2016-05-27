@@ -7,6 +7,7 @@
         <span class="icon-bar"></span> 
       </button>
 <div class="collapse navbar-collapse" id="myNavbar">
+	<div class="sub"style="margin-top:10px">
 	<% if @subcategory.apparel %>
 		<% Subcategory.all.each do |sub| %>
 			<%= link_to sub.name, sub, class: "btn btn-primary" if sub.apparel %>
@@ -34,6 +35,7 @@
 			<% end %>
 		<% end %>
 	<% end %>
+</div>
     	<div class="col-md-12 text-center" id="consumer-type">
 			<%= link_to @subcategory.gender1, men_path, class: "btn btn-default" if @subcategory.gender1 %>
 			<%= link_to @subcategory.gender2, women_path, class: "btn btn-default" if @subcategory.gender2 %>

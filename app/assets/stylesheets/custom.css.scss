@@ -34,10 +34,13 @@
 .icon-bar {
     background-color: black;
   }
-  .navbar-brand
+ .navbar-brand
   {
   	margin-top: -3px;
   }
+.navbar-collapse.in {
+    overflow-y: visible;
+}
 .navbar-default .navbar-nav li > a 
 {
 	color: #fff;
@@ -57,9 +60,12 @@
 {
 	border-color: black;
 }
+
+
 #search-form
 {
 	float:left;
 	margin-top: 8px;
 	margin-left: 0px;
 }
+
