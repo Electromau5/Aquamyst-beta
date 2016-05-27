@@ -1,5 +1,16 @@
 <%= render 'layouts/header' %>
+<nav class="navbar nav">
 <div class="container-fluid">
+	 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+     </button>
+      <div class = "row">
+      <div class = "col-xs-6 col-md-12">
+   
+<div class="collapse navbar-collapse" id="myNavbar">
+	<div class="sub-headers">
 	<% if @subcategory.apparel %>
 		<% Subcategory.all.each do |sub| %>
 			<%= link_to sub.name, sub, class: "btn btn-primary" if sub.apparel %>
@@ -27,11 +38,21 @@
 			<% end %>
 		<% end %>
 	<% end %>
+</div>
+</div>
+</div>
+</div>
+
     	<div class="col-md-12 text-center" id="consumer-type">
 			<%= link_to @subcategory.gender1, men_path, class: "btn btn-default" if @subcategory.gender1 %>
-			<%= link_to @subcategory.gender2, women_path, class: "btn btn-default" if @subcategory.gender2%>
-			<%= link_to @subcategory.gender3, both_path, class: "btn btn-default" if @subcategory.gender3%>
+			<%= link_to @subcategory.gender2, women_path, class: "btn btn-default" if @subcategory.gender2 %>
+			<%= link_to @subcategory.gender3, both_path, class: "btn btn-default" if @subcategory.gender3 %>
 		</div>
+          </div>
+        </div>
+  		</div>
+  </div>
+</nav>
 
 </div>
 <%= render 'listings/listing', obj: @subcategory_both %>
