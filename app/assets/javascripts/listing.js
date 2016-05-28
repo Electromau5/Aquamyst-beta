@@ -1,9 +1,12 @@
-$(document).ready(function() {
-  	return $('#grid').masonry({
-      itemSelector: '#listing-box',
-      isFitWidth: true
-    });
-  });
+$(document).ready( function() {
+  $('img').on('load',function(){
+   $('#grid').masonry({
+   itemSelector: '#listing-box',
+   isFitWidth: true
+                     });
+                });    
+});
+
 $(function() {
   return $('.zoom').elevateZoom({
     gallery: 'gallery',
@@ -16,3 +19,5 @@ $(function() {
     imageCrossfade: true
   });
 });
+
+Turbolinks.cacheCurrentPage();
