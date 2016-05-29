@@ -1,5 +1,5 @@
 class SubcategoriesController < ApplicationController
-
+ 
 def index
 	@Subcategories = Subcategory.all
 end

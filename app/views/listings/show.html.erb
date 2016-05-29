@@ -1,10 +1,16 @@
 <%= render 'layouts/header' %>
 <div class = "container">
+
 	<div class = "jumbotron"style="background-color:#fff;border-radius:5px;border:1px solid #000">
+<%= link_to 'Back', :back, class: "btn btn-default" %><br /><br />
+				
 		<div class = "row">
+			
+								
 			<div class = "col-md-6">
 					<%= image_tag @listing.image.url(:medium), :data => { zoom_image: @listing.image.url(:large) }, :class => "zoom" %>
 						<div class ="row">
+
 							<div class = "col-md-10 col-xs-6">
 								<div id="gallery">
 								 <%= link_to image_tag(@listing.image.url(:thumb)), '#', data: { image: @listing.image.url(:medium), zoom_image: @listing.image.url(:large) }, :class => 'zoom2' if @listing.image? %>
