@@ -37,7 +37,7 @@ before_action :set_listing, only: [:show, :edit, :update, :destroy]
     end
 
     def show
-    
+      @listing_seller = @listing.seller
     end
 
     def destroy

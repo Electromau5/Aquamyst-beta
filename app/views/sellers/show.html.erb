@@ -1,0 +1,30 @@
+<%= render 'layouts/header' %>
+<div class="container-fluid">
+	<div class="jumbotron" style="border:2px solid black;border-radius: 0">
+		<div class="row">
+				<div class="col-md-6">
+					<div class="seller-name">
+						<h1><%= @seller.name %></h1>
+					</div>
+						<div class="seller-description">
+							<p><%= @seller.description %></p>
+						</div>
+							<div class="seller-location">
+								<p><%= @seller.location %></p>
+							</div>
+				</div>
+		</div><br />
+			<div class="icons">
+				<%= link_to image_tag('facebook.png'), '#' %>
+				<%= link_to image_tag('twitter.png'), '#' %>
+				<%= link_to image_tag('instagram.png'), '#' %>
+			</div>
+	</div>
+</div>
+	<% if current_seller == @seller %>
+		<%= link_to 'Add a new product', new_listing_path, class: "btn btn-default" %><br /><br />
+	<% end %>
+<%= render 'listings/listing', obj: @seller_listings %>
+ 			
+
+

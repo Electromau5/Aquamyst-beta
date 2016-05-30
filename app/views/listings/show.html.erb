@@ -58,7 +58,9 @@
 					   	
 						<div class= "col-md-12 col-xs-12">
 							<h4>Product Description:</h4>
-								<%= @listing.description %>
+								<%= @listing.description %><br /><br />
+								<%= link_to 'More from this seller', @listing_seller, class: "btn btn-danger" %>
+							
 						</div>
 						
 				</div><br />

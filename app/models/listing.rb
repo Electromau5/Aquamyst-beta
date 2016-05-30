@@ -24,4 +24,5 @@ class Listing < ActiveRecord::Base
   def self.search(search)
        where("name LIKE ?", "%#{search}%") 
   end
+  belongs_to :seller
 end

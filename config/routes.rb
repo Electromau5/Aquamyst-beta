@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   devise_for :sellers
+  resources :sellers, only: [:show]
+
   root 'listings#index'
   resources :listings
 

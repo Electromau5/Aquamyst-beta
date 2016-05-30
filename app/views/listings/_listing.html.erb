@@ -9,6 +9,10 @@
              				<div class = "listing_name">
 			   					<%= truncate(listing.name, length: 100) %>
 			 				</div>
+			 				<div class="seller-listing">
+			 					by<br />
+			 						<small><%= link_to listing.seller.name,listing.seller if listing.seller%></smaill>
+			 				</div>
 			 			</div>
 			 	</div>
 			<% end %>
