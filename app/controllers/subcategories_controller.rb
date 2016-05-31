@@ -54,7 +54,7 @@ end
 private
 
 def subcategory_params
-	params.require(:subcategory).permit(:name, :image, :description, :gender1, :gender2, :gender3)
+	params.require(:subcategory).permit(:name, :gender1, :gender2, :gender3)
 end
 
 end

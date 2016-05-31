@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160530100954) do
+ActiveRecord::Schema.define(version: 20160531065822) do
+
+  create_table "applicants", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "location"
+    t.text     "description"
+    t.string   "category"
+    t.string   "vat"
+    t.string   "site"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -57,46 +69,42 @@ ActiveRecord::Schema.define(version: 20160530100954) do
 
   create_table "sellers", force: :cascade do |t|
     t.string   "name"
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
     t.text     "description"
     t.string   "location"
     t.string   "social1"
     t.string   "social2"
     t.string   "social3"
     t.string   "social4"
+    t.boolean  "admin",                  default: false
   end
 
   add_index "sellers", ["email"], name: "index_sellers_on_email", unique: true
   add_index "sellers", ["reset_password_token"], name: "index_sellers_on_reset_password_token", unique: true
 
   create_table "subcategories", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "category_id"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.text     "description"
-    t.string   "gender1"
-    t.string   "gender2"
-    t.string   "gender3"
-    t.boolean  "apparel",            default: false
-    t.boolean  "accessory",          default: false
-    t.boolean  "mobile",             default: false
-    t.boolean  "laptop",             default: false
-    t.boolean  "home",               default: false
-    t.boolean  "other",              default: false
+    t.string  "name"
+    t.integer "category_id"
+    t.string  "gender1"
+    t.string  "gender2"
+    t.string  "gender3"
+    t.boolean "apparel",     default: false
+    t.boolean "accessory",   default: false
+    t.boolean "mobile",      default: false
+    t.boolean "laptop",      default: false
+    t.boolean "home",        default: false
+    t.boolean "other",       default: false
   end
 
 end

@@ -16,6 +16,9 @@
         <% Category.all.each do |category| %>
           <li><%= link_to "#{category.name}", category_path(category) %></li>
         <% end %>
+        <% if seller_signed_in? && current_seller.admin? %>
+          <li><%= link_to 'Applicants', applicants_path %></li>
+        <% end %>
       </ul>
         <%= form_tag(listings_path, :method => "get") do %>
           <ul class="nav navbar-nav navbar-right" id="search-form">

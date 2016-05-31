@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  devise_for :sellers
+  devise_for :sellers, :path => '', :path_names => { :sign_up => 'thenorthremembers' }
+
   resources :sellers, only: [:show]
 
   root 'listings#index'
@@ -12,6 +13,9 @@ Rails.application.routes.draw do
   get 'men' => 'subcategories#men', path: 'subcategories/:id/men'
   get 'women' => 'subcategories#women', path: 'subcategories/:id/women'
   get 'both' => 'subcategories#both', path: 'subcategories/:id/both'
+
+  resources :applicants, only: [:new, :create]
+  get 'rainsofcastamere', to: 'applicants#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
