@@ -13,7 +13,7 @@ class ApplicantsController < ApplicationController
 		@applicant = Applicant.new(applicant_params)
 			if @applicant.save
 				#flash[:success] = "Welcome to the alpha blog #{@applicant.applicantname}"
-				redirect_to applicants_path
+				redirect_to thankyou_path
 			else
 				render 'new'
 			end
