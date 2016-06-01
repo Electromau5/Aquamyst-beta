@@ -36,30 +36,9 @@
   </div>
   <div class="form-group">
     <%= f.label :social4, 'Pinterest link' %>
-    <%= f.text_field :social4, class: 'form-control' %>
+    <%= f.text_field :social4, class: 'form-control' %><br />
   </div>
-
-  <div class="form-group">
-    <%= f.label :current_password, 'Current Password' %>
-    <%= f.password_field :current_password, autocomplete: "off", class: 'form-control' %>
-    <% if @validatable %>
-      <span class="help-block"><%= @minimum_password_length %> characters minimum</span>
-    <% end %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :password, 'New Password' %>
-    <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
-    <% if @validatable %>
-      <span class="help-block"><%= @minimum_password_length %> characters minimum</span>
-    <% end %>
-  </div>
-  <div class="form-group">
-    <%= f.label :password_confirmation, 'New Password Confirmation' %>
-    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %><br />
-  </div>
-
-  <%= f.submit "Edit Account", class: 'btn btn-primary' %><br /><br />
+<%= f.submit "Edit Account", class: 'btn btn-primary' %><br /><br />
   <%= link_to 'Cancel', root_path %><br /><br />
 <% end %>
 </div>

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  devise_for :sellers, :path => '', :path_names => { :sign_up => 'thenorthremembers' }
+  devise_for :sellers, :path => '', :path_names => { :sign_up => 'thenorthremembers' }, 
+                                     controllers: {registrations: 'registrations'}
 
   resources :sellers, only: [:show]
 
