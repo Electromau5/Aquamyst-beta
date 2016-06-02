@@ -1,4 +1,3 @@
-<%= render 'layouts/header' %>
 <nav class="navbar nav">
 <div class="container-fluid">
 	 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -53,19 +52,16 @@
 </div>
 </div>
 </div>
-
+<% if @subcategory.gender1 || @subcategory.gender2 || @subcategory.gender3 %>
     	<div class="col-md-12 text-center" id="consumer-type">
 			<%= link_to @subcategory.gender1, men_path, class: "btn btn-default" if @subcategory.gender1 %>
 			<%= link_to @subcategory.gender2, women_path, class: "btn btn-default" if @subcategory.gender2 %>
 			<%= link_to @subcategory.gender3, both_path, class: "btn btn-default" if @subcategory.gender3 %>
 		</div>
-          </div>
-        </div>
-  		</div>
+<% end %>
+        
   </div>
 </nav>
-
-</div>
 <%= render 'listings/listing', obj: @subcategory_men %>
 
 

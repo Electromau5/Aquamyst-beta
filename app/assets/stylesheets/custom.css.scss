@@ -1,6 +1,45 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+* 
+{
+    margin: 0;
+}
+
+html, body 
+{
+    height: 100%;
+}
+
+/*flash*/
+.alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-alert {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+
+.alert-notice {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+ 
 .company-details > .col-md-3 > h4
 {
 	color: #fff;
@@ -25,9 +64,7 @@
 }
 
 .footer {
-   left:0px;
-   bottom:0px;
-   //height:30px;
+   height:155px;
    width:100%;
 
 }
@@ -71,4 +108,18 @@
 	margin-top: 8px;
 	margin-left: -1px;
 }
+
+.push
+{
+	height: 155px;
+}
+
+.wrapper 
+{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+}
+
 

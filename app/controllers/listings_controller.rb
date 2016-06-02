@@ -1,7 +1,7 @@
 class ListingsController < ApplicationController
     
 before_action :set_listing, only: [:show, :edit, :update, :destroy]
-before_action :require_seller, only: [:new, :create, :edit, :update]
+before_action :authenticate_seller!, except: [:index, :show]
 before_action :require_sameseller, only: [:edit, :update, :destroy]
 
   def index
@@ -14,11 +14,11 @@ before_action :require_sameseller, only: [:edit, :update, :destroy]
   end
 
   def new
-    @listing = Listing.new
+    @listing = current_seller.listings.build
   end
 
     def create
-      @listing = Listing.new(listing_params)
+      @listing = current_seller.listings.build(listing_params)
       if @listing.save
         redirect_to listing_path(@listing)
       else
@@ -57,11 +57,6 @@ before_action :require_sameseller, only: [:edit, :update, :destroy]
         @listing = Listing.find(params[:id])
     end
 
-    def require_seller
-      if !seller_signed_in?
-        redirect_to root_path
-      end
-    end
 
     def require_sameseller
       if current_seller != @listing.seller

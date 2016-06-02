@@ -1,14 +1,6 @@
-<%= render 'layouts/header' %>
 <div class = "container-fluid">
 	<h1 style="text-align:center">Update product details</h1>
-		<% if @listing.errors.any? %>
-			<h2>Errors</h2>
-				<ul>
-					<% @listing.errors.full_messages.each do |msg| %>
-						<li><%= msg %></li>
-					<% end %>
-				</ul>
-		<% end %>
+		<%= render 'shared/errors', obj: @listing %>
 			<div class = "row">
 				<div class = "col-md-6 col-md-offset-3">
 					<%= form_for @listing do |l| %>
@@ -24,9 +16,9 @@
   						<%= l.radio_button :gender, 'women' %>
   						<%= label :gender_women, 'Women' %><br />
 						<%= l.radio_button :gender, 'both' %>
-  						<%= label :gender_both, 'Both' %><br /><br />
+  						<%= label :gender_both, 'Both' %><br />
   						<%= l.radio_button :gender, 'none' %>
-  						<%= label :gender_none, 'Not Applicable' %><br />
+  						<%= label :gender_none, 'Not Applicable' %><br /><br />
 						<%= l.label :feature1 %><br />
 						<%= l.text_field :feature1, class: "form-control" %>
 						<%= l.label :feature2 %><br />
@@ -36,16 +28,16 @@
 						<%= l.label :feature4 %><br />
 						<%= l.text_field :feature4, class: "form-control" %>
 						<%= l.label :feature5 %><br />
-						<%= l.text_field :feature5, class: "form-control" %>
+						<%= l.text_field :feature5, class: "form-control" %><br />
 						<%= l.label :price %><br />
-						<%= l.text_field :price, class: "form-control" %>
+						<%= l.text_field :price, class: "form-control" %><br />
 						<%= l.label :cod, 'Cash on Delivery' %>
 						<%= l.radio_button :cod, 'available' %> 
   						<%= label :cod_available, 'Available' %>
   						<%= l.radio_button :cod, 'not available' %> 
-  						<%= label :cod_not_available, 'Not Available' %><br />
+  						<%= label :cod_not_available, 'Not Available' %><br /><br />
 						<%= l.label :time, 'Delivery Time' %><br />
-						<%= l.text_field :time, class: "form-control" %>
+						<%= l.text_field :time, class: "form-control" %><br />
 						<%= l.label :image %>
 						<%= l.file_field :image, class: "form-control"%><br />
 						<%= l.label :image2 %>
@@ -57,7 +49,7 @@
 						<%= l.label :image5 %>
 						<%= l.file_field :image5, class: "form-control"%><br />
 						<%= l.label :site %><br />
-						<%= l.text_field :site, class: "form-control" %>
+						<%= l.text_field :site, class: "form-control" %><br />
 						<%= l.label :description, 'Detailed Description' %><br />
 						<%= l.text_area :description, class: "form-control" %><br /><br />
 						<%= l.submit 'Update', class: 'btn btn-primary btn-lg'  %>
@@ -66,4 +58,3 @@
 				</div>
 			</div>
 </div>
-<%= render 'layouts/footer' %>
