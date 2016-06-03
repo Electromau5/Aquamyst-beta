@@ -75,6 +75,13 @@ html, body
 .icon-bar {
     background-color: black;
   }
+
+.icons >  a > img
+{
+    float: right;
+    height: 50px;
+    margin-top: -22px;
+}
  .navbar-brand
   {
   	margin-top: -3px;
