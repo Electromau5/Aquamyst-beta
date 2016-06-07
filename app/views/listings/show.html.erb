@@ -36,9 +36,10 @@
 								<div class="fill">
 									<%= @listing.name %>
 								</div>
-									
+									<div class="by"style="font-weight:bold">by</div>
 										
 						</div>
+						<%= link_to @listing.seller.name, @listing.seller %><br /><br />
 								<div class="title" style="font-weight:bold;font-size:20px">
 									Key Features: <br/>
 								</div>
