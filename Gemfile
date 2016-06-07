@@ -16,6 +16,8 @@ gem 'paperclip', '~> 4.3', '>= 4.3.3'
 gem 'masonry-rails', '~> 0.2.4'
 gem 'elevatezoom-rails'	
 gem 'devise', '~> 4.1', '>= 4.1.1'
+gem 'aws-sdk', '< 2.0'
+gem 'activeadmin', '~> 1.0.0.pre2'
 
 group :development, :test do
   gem 'byebug'
