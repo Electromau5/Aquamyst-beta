@@ -11,44 +11,44 @@
 <div class="collapse navbar-collapse" id="myNavbar">
 	
 	<% if @subcategory.apparel %>
-		<% Subcategory.all.each do |sub| %>
-		<div class="sub-headers">
-			<li><%= link_to sub.name, sub, class: "btn btn-primary" if sub.apparel %></li><br />
-		</div>
-		<% end %>
+    <% Subcategory.all.where(:apparel => true).each do |sub| %>
+    <div class="sub-headers">
+      <li><%= link_to sub.name, sub, class: "btn btn-primary" if sub.apparel %></li><br />
+    </div>
+    <% end %>
     <% elsif @subcategory.accessory %>
-		<% Subcategory.all.each do |sub| %>
-		<div class="sub-headers">
-			<li><%= link_to sub.name, sub, class: "btn btn-primary" if sub.accessory %></li><br />
-		</div>
-		<% end %>
+    <% Subcategory.all.where(:accessory => true).each do |sub| %>
+    <div class="sub-headers">
+      <li><%= link_to sub.name, sub, class: "btn btn-primary" %></li><br />
+    </div>
+    <% end %>
      <% elsif @subcategory.mobile %>
-	 	<% Subcategory.all.each do |sub| %>
-	 	<div class="sub-headers">
-			<li><%= link_to sub.name, sub, class: "btn btn-primary" if sub.mobile %></li><br />
-		</div>
-		<% end %>
-	 <% elsif @subcategory.laptop %>
-	 	<% Subcategory.all.each do |sub| %>
-		<div class="sub-headers">
-			<li><%= link_to sub.name, sub, class: "btn btn-primary" if sub.laptop %></li><br />
-		</div>
-		<% end %>
-	 <% elsif @subcategory.home %>
-		<% Subcategory.all.each do |sub| %>
-			<div class="sub-headers">
-			<li><%= link_to sub.name, sub, class: "btn btn-primary" if sub.home %></li><br />
-		</div>
-		<% end %>
-	<% else %> 
-		<%if @subcategory.other %>
-			<% Subcategory.all.each do |sub| %>
-				<div class="sub-headers">
-			<li><%= link_to sub.name, sub, class: "btn btn-primary" if sub.other %></li><br />
-		</div>
-			<% end %>
-		<% end %>
-	<% end %>
+    <% Subcategory.all.where(:mobile => true).each   do |sub| %>
+    <div class="sub-headers">
+      <li><%= link_to sub.name, sub, class: "btn btn-primary" %></li><br />
+    </div>
+    <% end %>
+   <% elsif @subcategory.laptop %>
+    <% Subcategory.all.where(:laptop => true).each do |sub| %>
+    <div class="sub-headers">
+      <li><%= link_to sub.name, sub, class: "btn btn-primary" if sub.laptop %></li><br />
+    </div>
+    <% end %>
+   <% elsif @subcategory.home %>
+    <% Subcategory.all.where(:home => true).each do |sub| %>
+      <div class="sub-headers">
+      <li><%= link_to sub.name, sub, class: "btn btn-primary" if sub.home %></li><br />
+    </div>
+    <% end %>
+  <% else %> 
+    <%if @subcategory.other %>
+      <% Subcategory.all.where(:other => true).each do |sub| %>
+        <div class="sub-headers">
+      <li><%= link_to sub.name, sub, class: "btn btn-primary" if sub.other %></li><br />
+    </div>
+      <% end %>
+    <% end %>
+  <% end %>
 </div>
 </div>
 </div>

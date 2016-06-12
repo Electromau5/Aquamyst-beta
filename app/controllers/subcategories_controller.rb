@@ -1,7 +1,7 @@
 class SubcategoriesController < ApplicationController
  
 def index
-	@Subcategories = Subcategory.all
+	@subcategories = Subcategory.all
 end
 
 def new
