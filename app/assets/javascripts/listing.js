@@ -10,7 +10,7 @@ $(document).ready( function() {
 $(function() {
   return $('.zoom').elevateZoom({
     gallery: 'gallery',
-    zoomWindowPosition: 1,
+    zoomWindowPosition: 6,
     scrollZoom: true,
     responsive: true,
     borderSize: 1,
