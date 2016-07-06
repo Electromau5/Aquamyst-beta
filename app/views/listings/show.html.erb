@@ -51,7 +51,7 @@
 										<span style="font-size:25px;border:1px solid #008ac1;padding:6px">
 											₹ <%= @listing.price %>
 										</span><br /><br />
-										<div class= "cod">Cash on Delivery <%= @listing.cod %></div><br />
+										<div class= "cod">COD <%= @listing.cod %></div><br />
 										<div class="time">Delivery Time: <%= @listing.time %></div><br />
 									This item can be bought <%= link_to 'here', "#{@listing.site}" %><br /><br />
 					   </div>					   	
@@ -73,12 +73,12 @@
 		</div>
 	</div>
 </div>
-	<nav class="navbar navbar-default" style="background-color:#000;border: 1px solid #000">
+	<nav class="navbar navbar-default" style="background-color:#fff;border: 1px solid #000">
   <div class="container-fluid">
     <div class="navbar-header">
       <div class ="navbar-brand">
-          <div class="seperator"style="color:#fff;font-weight:bold">
-          	<h4>Products based on similar themes</h4>
+          <div class="seperator"style="color:#000">
+          	<h4 style="margin-top:4px">Products based on similar themes</h4>
           </div>
       </div>
     </div>
@@ -109,6 +109,27 @@
      <div class = "container-fluid">
     <div class = "row" id="grid">
 			<% Listing.all.where(:tag => 'funky designs').each do |listing| %>
+		  		<div class = "col-xs-6 col-md-3" id="listing-box">
+		    		<div class = "thumbnail"style="padding:6px">
+             			<%= link_to image_tag(listing.image.url(:medium)), listing %>
+             		</div>
+             			<div class="jumbotron"style="background-color:#fff;border:1px solid #DDDDDD;padding:0px;margin-top:-21px">
+             				<div class = "listing_name">
+			   					<%= truncate(listing.name, length: 100) %>
+			 				</div>
+			 				<div class="seller-listing">
+			 					by<br />
+			 						<small><%= link_to listing.seller.name,listing.seller if listing.seller%></smaill>
+			 				</div>
+			 			</div>
+			 	</div>
+			<% end %>
+	</div>
+  </div>
+    	  <% elsif @listing.tag == 'animals'  %>
+     <div class = "container-fluid">
+    <div class = "row" id="grid">
+			<% Listing.all.where(:tag => 'animals').each do |listing| %>
 		  		<div class = "col-xs-6 col-md-3" id="listing-box">
 		    		<div class = "thumbnail"style="padding:6px">
              			<%= link_to image_tag(listing.image.url(:medium)), listing %>
