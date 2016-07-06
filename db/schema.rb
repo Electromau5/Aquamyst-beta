@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160531065822) do
+ActiveRecord::Schema.define(version: 20160705235322) do
 
   create_table "applicants", force: :cascade do |t|
     t.string   "name"
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 20160531065822) do
     t.integer  "category_id"
     t.integer  "subcategory_id"
     t.integer  "seller_id"
+    t.string   "tag"
   end
 
   create_table "sellers", force: :cascade do |t|
