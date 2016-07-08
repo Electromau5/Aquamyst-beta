@@ -58,7 +58,11 @@
 						<%= l.radio_button :cod, 'available' %> 
   						<%= label :cod_available, 'Available' %>
   						<%= l.radio_button :cod, 'not available' %> 
-  						<%= label :cod_not_available, 'Not Available' %><br />
+  						<%= label :cod_not_available, 'Not Available' %>
+  						<%= l.radio_button :cod, ': Contact Seller' %> 
+  						<%= label :cod_contact, ': Contact Seller' %><br /><br />
+  						
+
 						<%= l.label :time, 'Delivery Time' %><br />
 						<%= l.text_field :time, class: "form-control" %>
 
@@ -78,7 +82,7 @@
 
 						<%= l.label :description, 'Detailed Description' %>
 						<%= l.text_area :description, class: "form-control" %><br/>
-						
+
 						<%= l.submit 'List my product', class: "btn btn-primary"%>
 						<%= link_to 'Cancel', root_path %>
 					<% end %>
