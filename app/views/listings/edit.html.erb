@@ -24,20 +24,18 @@
   						<%= label :gender_none, 'Not Applicable' %><br /><br />
   						
   						<%= l.label :tag, 'Themes' %><br />
-						<%= l.radio_button :tag, 'alcohol' %>
-  						<%= label :tag_travel, 'Alcohol' %><br/>
-						<%= l.radio_button :tag, 'cartoons' %> 
-  						<%= label :tag_cartoons, 'Cartoons' %><br />
+						<%= l.radio_button :tag, 'contemporary designs' %> 
+  						<%= label :tag_cartoons, 'Contemporary Designs' %><br />
   						<%= l.radio_button :tag, 'ethnic designs' %> 
-  						<%= label :tag_ethnic, 'Ethnic Designs' %><br /> 						
+  						<%= label :tag_ethnic, 'Ethnic Designs' %><br /> 
+  						<%= l.radio_button :tag, 'quotes' %>
+  						<%= label :tag_travel, 'Quotes' %><br/>
 						<%= l.radio_button :tag, 'spiritual designs' %> 
   						<%= label :tag_spiritual, 'Spiritual Designs' %><br />
 						<%= l.radio_button :tag, 'superheroes' %> 
   						<%= label :tag_superhero, 'Superheroes' %><br /> 						
-						<%= l.radio_button :tag, 'funky designs' %> 
-  						<%= label :tag_funky, 'Funky Designs' %><br />
-  						<%= l.radio_button :tag, 'travel' %>
-  						<%= label :tag_travel, 'Travel' %><br/><br />
+						<%= l.radio_button :tag, 'tv shows / movies' %> 
+  						<%= label :tag_funky, 'TV Shows / Movies' %><br />
   						<%= l.radio_button :tag, 'none' %>
   						<%= label :tag_none, 'None' %><br/><br /> 						
 						
@@ -60,9 +58,9 @@
   						<%= label :cod_available, 'Available' %>
   						<%= l.radio_button :cod, 'not available' %> 
   						<%= label :cod_not_available, 'Not Available' %>
-  						<%= l.radio_button :cod, ': Contact Seller' %> 
+  						<%= l.radio_button :cod, ': contact seller' %> 
   						<%= label :cod_contact, ': Contact Seller' %><br /><br />
-  						
+
 						<%= l.label :time, 'Delivery Time' %><br />
 						<%= l.text_field :time, class: "form-control" %><br />
 						
