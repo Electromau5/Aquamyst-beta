@@ -1,9 +1,7 @@
 $(document).ready( function() {
-  $('img').on('load',function(){
    $('#grid').masonry({
    itemSelector: '#listing-box',
    isFitWidth: true
-                     });
                 });    
 });
 
