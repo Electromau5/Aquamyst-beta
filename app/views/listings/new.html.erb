@@ -10,7 +10,7 @@
 						<%= l.label :category %><br />
   						<%= l.select :category_id, options_for_select(Category.all.map{|s|[s.name, s.id]}) %><br /><br />
 
-  						<%= l.label :subcategory %><br />
+						<%= l.label :subcategory, 'Subcategory' %><br />
   						<%= l.select :subcategory_id, options_for_select(Subcategory.all.map{|s|[s.name, s.id]}) %><br /><br />
 
   						<%= l.label :gender, 'Target Consumer (only for Apparel and Accessories)' %><br />

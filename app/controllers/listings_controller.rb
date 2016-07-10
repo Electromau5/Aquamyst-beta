@@ -46,6 +46,13 @@ before_action :require_sameseller, only: [:edit, :update, :destroy]
         redirect_to root_path
     end
 
+    def remove_image2
+      @listing = Listing.find(params[:id])
+      @listing.image2.destroy
+      @listing.save
+      redirect_to edit_listing_path, flash: { success: 'Image has been removed' }
+    end
+
     private
     def listing_params
        params.require(:listing).permit(:name, :feature1, :feature2, :feature3, :feature4, :feature5, 
