@@ -1,9 +1,9 @@
 $(document).ready(function(){
-       $('#grid').masonry({
+  $('#grid').masonry({
           itemSelector: '#listing-box',
           isFitWidth: true
-    });
- });
+  });
+});
 
 
 $(function() {
@@ -19,5 +19,5 @@ $(function() {
   });
 });
 
-// Turbolinks.cacheCurrentPage();
+Turbolinks.cacheCurrentPage();
 
