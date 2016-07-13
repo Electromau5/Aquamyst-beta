@@ -1,21 +1,11 @@
-
-window.onLoad = function(callback) {
-  // binds ready event and turbolink page:load event
-  $(document).ready(callback);
-  $(document).on('page:load',callback);
-};
-
-
-
-onLoad(function() {
-  $('#grid').masonry({
-   
-   itemSelector: '#listing-box',
-   isFitWidth: true
-  
-                   });
-
-});
+$(document).ready(function(){
+    $('#grid').imagesLoaded(function() {
+       $('#grid').masonry({
+          itemSelector: '#listing-box',
+          isFitWidth: true
+       });
+    });
+ });
 
 
 $(function() {
@@ -31,4 +21,5 @@ $(function() {
   });
 });
 
-Turbolinks.cacheCurrentPage();
+// Turbolinks.cacheCurrentPage();
+
