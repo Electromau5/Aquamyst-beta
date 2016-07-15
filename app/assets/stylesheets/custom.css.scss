@@ -88,6 +88,13 @@ html, body
     height: 50px;
     margin-top: -22px;
 }
+.landing-logo
+{
+    margin-left: 45%;
+    margin-top: 20%;
+    position: fixed;
+    z-index: 1;
+}
  .navbar-brand
   {
   	margin-top: -3px;
@@ -135,4 +142,44 @@ html, body
     margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
 }
 
+// Landing Page Modal
+
+
+.modal-content
+{
+    height: 400px;
+}
+
+.explore
+{
+    text-align: center;
+    margin-top: 10%;
+}
+.modal-header
+{
+    margin-top: 15%;
+}
+
+.modal-login //user login
+{
+    float: right;
+    font-family: "Raleway-Bold", sans-serif;
+    color: #000;
+}
+
+.modal-title
+{
+    font-family: "Raleway-Bold", sans-serif;
+    font-size: 30px;
+}
+.modal-description
+{
+    font-family: "Raleway-Regular", sans-serif;
+    font-size: 16px;
+}
+
+.modal-dialog
+{
+    margin-top: 11%;
+}
 

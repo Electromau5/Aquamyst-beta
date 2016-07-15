@@ -1,4 +1,18 @@
-<div class = "container-fluid">
+    <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                      <h4 class="modal-title"style="text-align:center">Welcome to Aquamyst</h4>
+                          <h5 class ="modal-description"style="text-align:center">Explore and discover amazing custom made products from the most innovative online stores in India</p>
+                </div>
+                        <div class="explore">
+                            <%= link_to 'Start Exploring', listings_path, class: "btn btn-primary btn-lg" %>
+                        </div>
+                  </div>
+                  </div>
+                  </div>
+
+<div class = "container-fluid"style="opacity:0.2">
     <div class = "row" id="grid">
           <% @listings.each do |listing| %>
           <div class = "col-xs-6 col-md-3" id="listing-box">

@@ -1,3 +1,8 @@
+$(window).load(function(){
+        $('#myModal').modal('show');
+    });
+
+
 $(document).ready(function(){
   $('#grid').masonry({
           itemSelector: '#listing-box',
@@ -20,4 +25,5 @@ $(function() {
 });
 
 Turbolinks.cacheCurrentPage();
+
 

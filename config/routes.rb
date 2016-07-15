@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :sellers, only: [:show]
 
-  root 'listings#index'
+  root 'listings#landing'
   resources :listings
 
   resources :categories, except: [:destroy]

@@ -1,8 +1,13 @@
 class ListingsController < ApplicationController
     
 before_action :set_listing, only: [:show, :edit, :update, :destroy]
-before_action :authenticate_seller!, except: [:index, :show]
+before_action :authenticate_seller!, except: [:index, :show, :landing]
 before_action :require_sameseller, only: [:edit, :update, :destroy]
+
+
+  def landing
+    @listings = Listing.all
+  end
 
   def index
    @listings = Listing.all
