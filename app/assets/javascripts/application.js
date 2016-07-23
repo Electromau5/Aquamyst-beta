@@ -18,5 +18,6 @@
 //= require masonry/jquery.imagesloaded.min
 //= require jquery.elevatezoom
 //= require bootstrap-sprockets
+//= require turbolinks_transitions
 //= require_tree .
 

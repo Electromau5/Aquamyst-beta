@@ -4,10 +4,12 @@ $(window).load(function(){
 
 
 $(document).ready(function(){
+ 
   $('#grid').masonry({
           itemSelector: '#listing-box',
           isFitWidth: true
-  });
+ 
+});
 });
 
 
