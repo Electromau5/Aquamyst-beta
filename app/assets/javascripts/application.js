@@ -16,8 +16,11 @@
 //= require turbolinks
 //= require masonry/jquery.masonry
 //= require masonry/jquery.imagesloaded.min
+//= require masonry/modernizr-transitions
 //= require jquery.elevatezoom
 //= require bootstrap-sprockets
 //= require modernizr
+//= require AnimeOnScroll.js
+//= require imagesLoaded.js
 //= require_tree .
 
