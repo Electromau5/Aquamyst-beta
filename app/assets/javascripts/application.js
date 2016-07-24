@@ -20,7 +20,5 @@
 //= require jquery.elevatezoom
 //= require bootstrap-sprockets
 //= require modernizr
-//= require AnimeOnScroll.js
-//= require imagesLoaded.js
 //= require_tree .
 
