@@ -20,7 +20,7 @@ gem 'elevatezoom-rails'
 gem 'devise', '~> 4.1', '>= 4.1.1'
 gem 'aws-sdk', '< 2.0'
 gem 'activeadmin', '~> 1.0.0.pre2'
-gem 'turbolinks_transitions'
+gem 'modernizr-rails'
 
 group :development, :test do
   gem 'byebug'
