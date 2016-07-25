@@ -22,6 +22,7 @@ gem 'aws-sdk', '< 2.0'
 gem 'activeadmin', '~> 1.0.0.pre2'
 gem 'modernizr-rails'
 gem 'rack-cors'
+gem 'will_paginate-bootstrap'
 
 
 group :development, :test do
