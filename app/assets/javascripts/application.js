@@ -17,6 +17,11 @@
 //= require masonry/jquery.masonry
 //= require masonry/jquery.imagesloaded.min
 //= require masonry/modernizr-transitions
+//= require imagesloaded
+//= require AnimOnScroll
+//= require classie
+//= require masonry.pkgd.min
+//= require modernizr.custom
 //= require jquery.elevatezoom
 //= require bootstrap-sprockets
 //= require modernizr
