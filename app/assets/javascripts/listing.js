@@ -3,12 +3,22 @@ $(window).load(function(){
     });
 
 
-$(document).ready(function(){
-  $('#grid').masonry({
-          itemSelector: '#listing-box',
+function Bricks() {
+
+    var $container = $('#grid');
+
+    $container.imagesLoaded(function () {
+        $container.masonry({
+           itemSelector: '#listing-box',
           isFitWidth: true,
           isAnimated: !Modernizr.csstransitions
-  });
+        });
+    });
+
+}
+
+$(document).ready(function () {
+    Bricks();
 });
 
 
@@ -26,5 +36,3 @@ $(function() {
 });
 
 Turbolinks.cacheCurrentPage();
-
-
