@@ -3,17 +3,15 @@ $(window).load(function(){
     });
 
 
-function Bricks() {
-
-    var $container = $('#grid');
-
-    $container.imagesLoaded(function () {
-        $container.masonry({
+$(document).ready(function) {
+    $('#grid').imagesLoaded(function () {
+        $('#grid').masonry({
            itemSelector: '#listing-box',
           isFitWidth: true,
           isAnimated: !Modernizr.csstransitions
         });
     });
+  });
 
 }
 
