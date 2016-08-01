@@ -3,7 +3,7 @@ $(window).load(function(){
     });
 
 
-$(document).ready(function) {
+$(document).ready(function() {
     $('#grid').imagesLoaded(function () {
         $('#grid').masonry({
            itemSelector: '#listing-box',
@@ -12,12 +12,6 @@ $(document).ready(function) {
         });
     });
   });
-
-}
-
-$(document).ready(function () {
-    Bricks();
-});
 
 
 $(function() {
