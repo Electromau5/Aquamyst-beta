@@ -42,6 +42,7 @@ class Listing < ActiveRecord::Base
   belongs_to :category
   belongs_to :subcategory
   belongs_to :seller
+  has_and_belongs_to_many :consumers
   
   def self.search(search)
        where("name LIKE ?", "%#{search}%") 

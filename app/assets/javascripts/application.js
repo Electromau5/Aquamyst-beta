@@ -20,5 +20,6 @@
 //= require jquery.elevatezoom
 //= require bootstrap-sprockets
 //= require modernizr
+//= require jquery.flexslider
 //= require_tree .
 

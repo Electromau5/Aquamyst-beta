@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   devise_for :sellers, :path => '', :path_names => { :sign_up => 'thenorthremembers' }, 
                                      controllers: {registrations: 'registrations'}
 
   resources :sellers, only: [:show]
+  resources :users, only: [:show]
 
   root 'listings#landing'
   resources :listings

@@ -23,7 +23,7 @@ gem 'activeadmin', '~> 1.0.0.pre2'
 gem 'modernizr-rails'
 gem 'rack-cors'
 gem 'will_paginate-bootstrap'
-
+gem 'flexslider', :git => 'https://github.com/constantm/Flexslider-2-Rails-Gem.git'
 
 group :development, :test do
   gem 'byebug'

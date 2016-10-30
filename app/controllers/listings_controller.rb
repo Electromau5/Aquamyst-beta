@@ -69,6 +69,11 @@ before_action :require_sameseller, only: [:edit, :update, :destroy]
         @listing = Listing.find(params[:id])
     end
 
+    def save(listing)
+      @consumer.listing << listing
+      @consumer.save
+    end
+
 
     def require_sameseller
       if current_seller != @listing.seller

@@ -13,5 +13,6 @@
  *= require_tree .
  *= require 'masonry/basic'
  *= require 'masonry/transitions'
+ *= require flexslider.css
  *= require_self
  */
