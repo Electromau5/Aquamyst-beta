@@ -1,7 +1,8 @@
 class ListingsController < ApplicationController
     
 before_action :set_listing, only: [:show, :edit, :update, :destroy]
-before_action :authenticate_seller!, except: [:index, :show, :landing]
+before_action :authenticate_seller!, except: [:index, :show, :landing, :save, :remove]
+before_action :authenticate_user!, only: [:save, :remove]
 before_action :require_sameseller, only: [:edit, :update, :destroy]
 
 
@@ -43,6 +44,8 @@ before_action :require_sameseller, only: [:edit, :update, :destroy]
     end
 
     def show
+      @user = current_user
+      #@listing_user = current_user.listings(@listing)
       @listing_seller = @listing.seller
     end
 
@@ -50,6 +53,19 @@ before_action :require_sameseller, only: [:edit, :update, :destroy]
         @listing.destroy
         redirect_to root_path
     end
+
+    def save
+        @listing = Listing.find(params[:id])
+        current_user.listings << @listing
+        redirect_to listing_path(@listing), flash: { success: 'Product has been saved'}
+    end
+
+    def remove 
+      @listing = Listing.find(params[:id])
+      current_user.listings.delete(@listing)
+      redirect_to listing_path(@listing), flash: { success: 'Product has been removed from your catalogue'}
+    end
+
 
     def remove_image2
       @listing = Listing.find(params[:id])
@@ -67,11 +83,6 @@ before_action :require_sameseller, only: [:edit, :update, :destroy]
 
     def set_listing
         @listing = Listing.find(params[:id])
-    end
-
-    def save(listing)
-      @consumer.listing << listing
-      @consumer.save
     end
 
 

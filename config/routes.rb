@@ -8,7 +8,16 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
 
   root 'listings#landing'
+
   resources :listings
+
+  resources :listings do
+    put :save, on: :member
+  end
+
+  resources :listings do
+    put :remove, on: :member
+  end
 
   resources :categories, except: [:destroy]
   resources :subcategories, except: [:destroy]

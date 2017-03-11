@@ -5,12 +5,8 @@
       <li><%= image_tag('shop.jpg') %></li>
     </ul>
   </div>
-  <div class="custom-navigation">
-    <a href="#" class="flex-prev"></a>
-      <div class="custom-controls-container"></div>
-    <a href="#" class="flex-next"></a>
-  </div>
 <div class = "container-fluid">
+  <h2  class="product-list-header">NEW PRODUCTS</h2>
     <div class = "row" id="grid">
           <% @listings.each do |listing| %>
           <div class = "col-xs-6 col-md-3" id="listing-box">

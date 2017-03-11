@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
 
-#before_filter :authenticate_seller!
+#before_filter :authenticat_user!
 
   def show
     @user = User.find(params[:id])
-   end
+    @user_listings =@user.listings
+  end
 end
