@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Constant Meiring", "Patrik Wehrli"]
-  s.date = "2016-10-30"
+  s.date = "2017-03-11"
   s.description = "Flexslider 2 Rails Gem"
   s.email = ["constant@aisleb.co.za", "patrik.wehrli@gmail.com"]
   s.files = ["LICENSE", "README.md", "lib/flexslider", "lib/flexslider.rb", "lib/flexslider/version.rb", "vendor/assets", "vendor/assets/fonts", "vendor/assets/fonts/flexslider-icon.eot", "vendor/assets/fonts/flexslider-icon.svg", "vendor/assets/fonts/flexslider-icon.ttf", "vendor/assets/fonts/flexslider-icon.woff", "vendor/assets/javascripts", "vendor/assets/javascripts/jquery.flexslider-min.js", "vendor/assets/javascripts/jquery.flexslider.js", "vendor/assets/stylesheets", "vendor/assets/stylesheets/flexslider.sass"]
